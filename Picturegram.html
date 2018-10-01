@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Picturegram</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	
+	<style type="text/css">
+
+		
+		* {
+			box-sizing: border-box;
+		}
+
+		img {
+			border: 2px solid orange;
+		}
+		#mainpic {
+			width: calc(100% - 10px);
+			height: auto;
+			margin: 5px;
+		}
+
+		.smallpic {
+				width: calc(33.3333333333% - 13px);
+				height: auto;
+				margin: 5px;
+				box-shadow: 0px 3px 10px;
+				border-radius: 10px;
+		}
+
+		h1 {
+			text-align: center;
+			font-family: "Lobster";
+			font-size: 50px;
+			font-weight: 175;
+			margin: 0;
+		}
+
+		img:hover {
+			border: 2px solid red;
+			cursor: pointer;
+		}
+
+		#nah {
+			display: block;
+			margin: auto;
+		}
+
+		body{
+			background: linear-gradient(276deg, orange, red, purple, blue);
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<h1>Picturegram</h1>
+
+	<img src="https://pbs.twimg.com/media/CyIR4eSUsAAsuLf.jpg" id="mainpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVb15L1kyp5QVbjq51lfvU7E3DzxHcqQxZVjdWrqdSbm8ZtCdM" class="smallpic">
+	<img src="https://www.asiaexplorationtreks.com/uploads/category/tibet-the-roof-of-the-world1471952294.jpg"  class="smallpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4lWH85AUau3H7a6UrwdRV_HO3snxdWNkWvQ2rrrfTZZu4zIVu" class="smallpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTwxkCvAuC629G_OAhV-7DdO_TNFRQmPuVQbpeGeZ2UtUYR3yL" class="smallpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVBG8MtGpIIgPOeDMJ8BBu5iI-Cu0TKtAapYM1ed7gzDrbieBquw" class="smallpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTKo4PmBfigzDGZiPMu914V16_zV_tkzirfM3wgy3SBqhgRIW2" class="smallpic">
+	<img src="https://s3.amazonaws.com/cccmedia/2017/11/07235139/tibet-.jpg" class="smallpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSY4XRhjJU_qsmKNJWus1QroUvwp-P8L70LLLluj_OwaJ5GFdUTw" class="smallpic">
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLfe0JjjILq-2hekwPqjDOiJmcheplWBxisjAyOpC8gvEw4zQ1" class="smallpic">
+	<img src="http://www.suenicol.com/wp-content/uploads/Sand-Dunes-and-Snow-Tibet-600mm-300x300.jpg" class="smallpic" id="nah">
+
+	<script type="text/javascript">
+		const bigImage = document.querySelector("#mainpic");
+		const images = document.querySelectorAll(".smallpic");
+
+		images.forEach(image => image.addEventListener("click", 
+			function(e) {
+				let clickedImage = e.target.src;
+				let swapImage = bigImage.src;
+				bigImage.src = clickedImage;
+				e.target.src = swapImage;
+			}
+			));
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
